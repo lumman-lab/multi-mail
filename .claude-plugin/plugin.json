@@ -8,6 +8,8 @@
     "url": "https://lumman.co"
   },
   "homepage": "https://lumman.co/mcp",
+  "icon": "./.claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://lumman.co/privacy",
   "repository": "https://github.com/lumman-lab/multi-mail",
   "license": "MIT",
   "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365"]
