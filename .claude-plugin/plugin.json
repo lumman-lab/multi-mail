@@ -9,7 +9,10 @@
   },
   "homepage": "https://lumman.co/mcp",
   "icon": "./.claude-plugin/icon.png",
+  "documentationUrl": "https://github.com/lumman-lab/multi-mail#readme",
+  "supportUrl": "https://github.com/lumman-lab/multi-mail#support",
   "privacyPolicyUrl": "https://lumman.co/privacy",
+  "termsOfServiceUrl": "https://lumman.co/terms",
   "repository": "https://github.com/lumman-lab/multi-mail",
   "license": "MIT",
   "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365"]
