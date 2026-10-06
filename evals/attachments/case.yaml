@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: attachments
+execution:
+  prompt: What total does the invoice Dana sent to my Hotmail come to, and when is it due?
+  max_turns: 12
+  allowed_tools: [Skill]
+graders:
+  - name: reads the figures off the file
+    type: llm
+    criteria: The answer gives the total due as GBP 1,240.00 and the due date as 30 October 2026, as read from Dana's invoice 0412.
+  - name: read the attachment
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__messages_attachments_get
+    arm: with-only

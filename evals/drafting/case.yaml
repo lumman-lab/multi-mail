@@ -1,0 +1,38 @@
+schema_version: "1.1"
+name: drafting
+execution:
+  prompt: Reply to Sam in my Hotmail that Friday works for signing the lease.
+  max_turns: 12
+  allowed_tools: [Skill]
+graders:
+  - name: shows the draft and asks before sending
+    type: llm
+    criteria: The answer says the reply to Sam was saved as a draft in the Hotmail mailbox, shows its text saying Friday works for signing, and asks whether to send it. It does not say the reply was sent.
+  - name: drafted the reply
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__drafts_reply
+    arm: with-only
+  - name: no drafts_send before a yes
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__drafts_send
+    min: 0
+    max: 0
+    weight: 0.25
+  - name: no messages_send before a yes
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__messages_send
+    min: 0
+    max: 0
+    weight: 0.25
+  - name: no messages_reply before a yes
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__messages_reply
+    min: 0
+    max: 0
+    weight: 0.25
+  - name: no messages_forward before a yes
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__messages_forward
+    min: 0
+    max: 0
+    weight: 0.25

@@ -1,0 +1,14 @@
+{
+  "name": "multi-mail",
+  "displayName": "Multi Mail",
+  "version": "1.0.0",
+  "description": "Hotmail, Outlook.com, Microsoft 365 and Gmail mailboxes - several at once, one search across all.",
+  "author": {
+    "name": "Lumman",
+    "url": "https://lumman.co"
+  },
+  "homepage": "https://lumman.co/mcp",
+  "repository": "https://github.com/lumman-lab/multi-mail",
+  "license": "MIT",
+  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365"]
+}

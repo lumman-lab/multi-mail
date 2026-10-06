@@ -1,0 +1,17 @@
+{
+  "name": "multi-mail",
+  "owner": {
+    "name": "Lumman",
+    "url": "https://lumman.co"
+  },
+  "metadata": {
+    "description": "The Multi Mail plugin for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "multi-mail",
+      "source": "./",
+      "description": "Hotmail, Outlook.com, Microsoft 365 and Gmail mailboxes - several at once, one search across all."
+    }
+  ]
+}

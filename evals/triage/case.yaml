@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: triage
+execution:
+  prompt: What in my Hotmail and Gmail still needs a reply from me?
+  max_turns: 12
+  allowed_tools: [Skill]
+graders:
+  - name: names what waits, and only that
+    type: llm
+    criteria: Where the answer lists what needs a reply, it lists Sam's lease renewal (Hotmail) and Priya's dinner question (Gmail) and nothing else. The invoice, the newsletter, the shipped order and the boiler thread, last answered by Alex, may appear elsewhere in the answer but not as needing a reply.
+  - name: searched every mailbox at once
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__messages_list_all_mailboxes
+    arm: with-only

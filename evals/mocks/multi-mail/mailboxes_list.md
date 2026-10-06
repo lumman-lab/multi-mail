@@ -1,0 +1,1 @@
+{"mailboxes":[{"mailbox":"Hotmail","emailAddress":"alex@example.com","provider":"microsoft","unsupportedMethods":["settings_send_as_patch","settings_send_as_get","drafts_delete"]},{"mailbox":"Gmail","emailAddress":"alex@example.org","provider":"google","unsupportedMethods":[]}]}
