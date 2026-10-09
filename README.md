@@ -1,6 +1,6 @@
 # Multi Mail
 
-Hotmail, Outlook.com, Microsoft 365 and Gmail mailboxes - several at once, one search across all.
+Gmail, Outlook, Hotmail, iCloud and Fastmail mailboxes - several at once, one search across all.
 
 A Claude Code plugin made by Lumman. It connects Claude Code to the Multi Mail connector and adds four skills for working across your mailboxes.
 
@@ -39,6 +39,7 @@ The drafting skill asks Claude to show a draft and wait for your yes. What the c
 - Gmail mailboxes are in Google's preview, which admits a fixed number of accounts; once its places are spent, no new Gmail mailbox can be connected.
 - Discarding a draft, and reading or setting a signature, work in Gmail mailboxes only.
 - Microsoft lets an Outlook category take a new colour, never a new name.
+- iCloud and Fastmail mailboxes connect with an app password and take every tool except filters, the vacation responder, send-as and discarding a draft. Their labels are their folders, as your own mail app shows them, and the labels skill leaves them alone.
 - Mail whose words screen as a prompt attack is refused rather than passed on, and a call whose screening cannot finish is closed.
 
 ## Evals

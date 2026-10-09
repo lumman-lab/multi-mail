@@ -1,6 +1,6 @@
 ---
 name: drafting
-description: Write, reply to or forward an email from a connected Outlook, Hotmail, Microsoft 365 or Gmail mailbox as a draft, show it, and send it only after the person says yes to that draft. Use for any request to write, answer or forward mail.
+description: Write, reply to or forward an email from a connected Outlook, Hotmail, Microsoft 365, Gmail, iCloud or Fastmail mailbox as a draft, show it, and send it only after the person says yes to that draft. Use for any request to write, answer or forward mail.
 ---
 
 # Draft, confirm, then send
@@ -20,7 +20,7 @@ Nothing is sent until the person has seen the draft and said yes to it.
 
 This skill never uses `messages_send`, `messages_reply` or `messages_forward`: each sends in one call, with no draft to show.
 
-A draft that is not wanted: `drafts_delete` discards it in a Gmail mailbox. An Outlook draft keeps its id once sent, so the connector never discards one - ask the person to delete it in Outlook.
+A draft that is not wanted: `drafts_delete` discards it in a Gmail mailbox. An Outlook draft keeps its id once sent, so the connector never discards one - ask the person to delete it in Outlook. Nor does it discard an iCloud or Fastmail draft: the person deletes it in their own mail app.
 
 Examples:
 

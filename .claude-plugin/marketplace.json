@@ -11,7 +11,7 @@
     {
       "name": "multi-mail",
       "source": "./",
-      "description": "Hotmail, Outlook.com, Microsoft 365 and Gmail mailboxes - several at once, one search across all."
+      "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail mailboxes - several at once, one search across all."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "name": "multi-mail",
   "displayName": "Multi Mail",
-  "version": "1.0.0",
-  "description": "Hotmail, Outlook.com, Microsoft 365 and Gmail mailboxes - several at once, one search across all.",
+  "version": "1.0.1",
+  "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail mailboxes - several at once, one search across all.",
   "author": {
     "name": "Lumman",
     "url": "https://lumman.co"
@@ -15,5 +15,5 @@
   "termsOfServiceUrl": "https://lumman.co/terms",
   "repository": "https://github.com/lumman-lab/multi-mail",
   "license": "MIT",
-  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365"]
+  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365", "icloud", "fastmail"]
 }
