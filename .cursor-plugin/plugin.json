@@ -1,0 +1,14 @@
+{
+  "name": "multi-mail",
+  "displayName": "Multi Mail",
+  "version": "1.1.0",
+  "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.",
+  "author": {
+    "name": "Lumman"
+  },
+  "homepage": "https://lumman.co/mcp/multi-mail",
+  "repository": "https://github.com/lumman-lab/multi-mail",
+  "license": "MIT",
+  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365", "icloud", "fastmail"],
+  "logo": ".claude-plugin/icon.png"
+}

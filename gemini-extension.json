@@ -1,0 +1,12 @@
+{
+  "name": "multi-mail",
+  "version": "1.1.0",
+  "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.",
+  "mcpServers": {
+    "multi-mail": {
+      "type": "http",
+      "url": "https://mail.lumman.co/mcp",
+      "oauth": { "enabled": true }
+    }
+  }
+}
