@@ -58,11 +58,10 @@ The extension adds the connector at https://mail.lumman.co/mcp and the four skil
 ### ChatGPT
 
 1. For iCloud or Fastmail, add the mailbox first in your account, under Another mailbox.
-2. Turn on Developer mode: Settings > Security and login > Developer mode.
-3. Open chatgpt.com/plugins, press +, then Create MCP App.
-4. Name it Multi Mail, paste `https://mail.lumman.co/mcp`, choose OAuth, tick the trust box and press Create.
-5. On the Lumman page, sign in, add a mailbox if none is connected, and approve.
-6. In each chat: + > Developer mode > Multi Mail.
+2. Open chatgpt.com/plugins, press +, then Add custom MCP server.
+3. Name it Multi Mail, paste `https://mail.lumman.co/mcp`, choose OAuth, tick the box and press Create as a plugin.
+4. Install it. On the Lumman page, sign in, add a mailbox if none is connected, and approve.
+5. In a chat, type @ and choose Multi Mail.
 
 ### Any other client
 
