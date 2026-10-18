@@ -1,6 +1,6 @@
 {
   "name": "multi-mail",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.",
   "mcpServers": {
     "multi-mail": {

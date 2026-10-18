@@ -124,7 +124,7 @@ Examples:
 
 ## Where your mail goes
 
-Claude and Claude Code send every call to https://lumman.co/mcp/mail, every other client to https://mail.lumman.co/mcp - two addresses of one server, run by Lumman. Signing in runs through the authorisation server those addresses name. Lumman keeps no copy of your mail: each message and attachment is fetched from its provider when a client asks, its words are screened for prompt attacks by Google Cloud's Model Armor, and the mail is passed on only to the client you approved. What the connector passes on, and to whom, is in the privacy policy: https://lumman.co/privacy.
+Claude and Claude Code send every call to https://lumman.co/mcp/mail, every other client to https://mail.lumman.co/mcp - two addresses of one server, run by Lumman. Signing in runs through the authorisation server those addresses name. Lumman keeps no copy of your mail: each message and attachment is fetched from its provider when a client asks, its words are screened for prompt attacks by Google Cloud's Model Armor - an attachment asked for as the original file is not - and the mail is passed on only to the client you approved. What the connector passes on, and to whom, is in the privacy policy: https://lumman.co/privacy.
 
 The drafting skill asks the client to show a draft and wait for your yes. What the connector itself enforces is each mailbox's permission to send, set at https://lumman.co/mcp/account/multi-mail: with sending off, nothing is sent, whatever a client asks.
 
