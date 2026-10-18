@@ -2,7 +2,7 @@
 
 Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.
 
-Multi Mail is a remote MCP server run by Lumman Ltd, London. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor and Gemini CLI, four skills and their evals. The server itself is not in it.
+Multi Mail is a remote MCP server run by Lumman Ltd, London. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI and Antigravity, four skills and their evals. The server itself is not in it.
 
 ## Before you start
 
@@ -55,6 +55,14 @@ gemini extensions install https://github.com/lumman-lab/multi-mail
 
 The extension adds the connector at https://mail.lumman.co/mcp and the four skills below. Its first call opens Lumman's sign-in in your browser; `/mcp auth multi-mail` opens it again.
 
+### Antigravity
+
+```
+agy plugin install https://github.com/lumman-lab/multi-mail
+```
+
+The plugin adds the connector at https://mail.lumman.co/mcp and the four skills below, for the Antigravity CLI, app and IDE alike. To sign in, run `/mcp` in the CLI, open `multi-mail_multi-mail` and choose Authenticate, or in the app or IDE press Authenticate next to it under Agent settings, Customizations; approve on the Lumman page that opens, then paste the code Antigravity's page shows back into Antigravity.
+
 ### ChatGPT
 
 1. For iCloud or Fastmail, add the mailbox first in your account, under Another mailbox.
@@ -73,7 +81,7 @@ The connector answers a client's first call with where to sign in. The client re
 
 ## Skills
 
-Claude Code and Gemini CLI load four skills with the connector, and pick one by themselves when a request matches it. In Claude Code each is also a command, such as `/multi-mail:triage`.
+Claude Code, Cursor, Gemini CLI and Antigravity load four skills with the connector, and pick one by themselves when a request matches it. In Claude Code each is also a command, such as `/multi-mail:triage`.
 
 - `triage` - what is waiting across every mailbox: what needs a reply, what needs a decision, what can wait. Changes nothing.
 - `attachments` - what a PDF (scanned pages included), Word, Excel or PowerPoint attachment says, read as text.

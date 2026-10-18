@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "multi-mail": {
+      "serverUrl": "https://mail.lumman.co/mcp"
+    }
+  }
+}
