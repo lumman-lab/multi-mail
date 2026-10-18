@@ -2,7 +2,7 @@
 
 Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.
 
-Multi Mail is a remote MCP server run by Lumman Ltd, London. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI and Antigravity, four skills and their evals. The server itself is not in it.
+Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI and Antigravity, four skills and their evals. The server itself is not in it.
 
 ## Before you start
 
