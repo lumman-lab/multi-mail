@@ -2,7 +2,7 @@
 
 Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.
 
-Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI and Antigravity, four skills and their evals. The server itself is not in it.
+Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI, Antigravity and Kiro, four skills and their evals. The server itself is not in it.
 
 ## Before you start
 
@@ -63,9 +63,13 @@ agy plugin install https://github.com/lumman-lab/multi-mail
 
 The plugin adds the connector at https://mail.lumman.co/mcp and the four skills below, for the Antigravity CLI, app and IDE alike. To sign in, run `/mcp` in the CLI, open `multi-mail_multi-mail` and choose Authenticate, or in the app or IDE press Authenticate next to it under Agent settings, Customizations; approve on the Lumman page that opens, then paste the code Antigravity's page shows back into Antigravity.
 
+### Kiro
+
+In the Powers panel press Add Custom Power, choose Import power from GitHub, paste `https://github.com/lumman-lab/multi-mail/tree/main/kiro` and press Install. The power adds the connector at https://mail.lumman.co/mcp.
+
 ### ChatGPT
 
-1. For iCloud or Fastmail, add the mailbox first in your account, under Another mailbox.
+1. For iCloud or Fastmail, add the mailbox first in your account, under Add a mailbox.
 2. Open chatgpt.com/plugins, press +, then Add custom MCP server.
 3. Name it Multi Mail, paste `https://mail.lumman.co/mcp`, choose OAuth, tick the box and press Create as a plugin.
 4. Install it. On the Lumman page, sign in, add a mailbox if none is connected, and approve.
@@ -77,7 +81,7 @@ Add a remote MCP server at `https://mail.lumman.co/mcp`: Streamable HTTP, OAuth 
 
 ## Signing in
 
-The connector answers a client's first call with where to sign in. The client registers itself with Lumman's authorisation server and opens a Lumman page that names it: sign in, add a mailbox if none is connected, and approve. Every client you approve is listed under Connected AI clients at https://lumman.co/mcp/account/multi-mail, where its access can be taken back.
+The connector answers a client's first call with where to sign in. The client registers itself with Lumman's authorisation server and opens a Lumman page that names it: sign in, add a mailbox if none is connected, and approve. Every client you approve is listed under AI apps at https://lumman.co/mcp/account/multi-mail, where it can be removed.
 
 ## Skills
 
