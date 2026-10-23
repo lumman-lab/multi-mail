@@ -6,7 +6,7 @@ Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you c
 
 ## Before you start
 
-You need a Lumman account with at least one mailbox connected at https://lumman.co/mcp/account/multi-mail. Sign in there with Google, Microsoft, a passkey or an emailed code. Outlook, Hotmail and Microsoft 365 mailboxes connect with Microsoft sign-in, iCloud and Fastmail with an app password, and Gmail with Google sign-in while Google's preview has room; once it is full, a gmail.com or googlemail.com mailbox connects with an app password and a Google Workspace one waits for room. Each mailbox's permissions - reading, drafts, sending, organising and settings - are set on the same page.
+You need a Lumman account with at least one mailbox connected at https://lumman.co/mcp/account/multi-mail. Sign in there with Google, Microsoft, a passkey or an emailed code. Outlook, Hotmail and Microsoft 365 mailboxes connect with Microsoft sign-in, iCloud and Fastmail with an app password, and Gmail with Google sign-in while Google's preview has room; once it is full, a Gmail or Google Workspace mailbox connects with an app password. Each mailbox's permissions - reading, drafts, sending, organising and settings - are set on the same page.
 
 ## Add it to your client
 
@@ -108,6 +108,7 @@ Examples:
 | `threads_get` | Read a thread | Every message in one thread |
 | `messages_get` | Read a message | One message, with its headers and body |
 | `messages_attachments_get` | Read an attachment | What one attachment holds |
+| `sweeps_preview` | Preview a clear-out | Who fills a folder, by sender |
 | `drafts_create` | Draft a message | Composes a message kept as a draft |
 | `drafts_update` | Edit a draft | Replaces what a draft says |
 | `drafts_reply` | Draft a reply | A reply, drafted inside its thread |
@@ -125,6 +126,8 @@ Examples:
 | `threads_archive` | Archive a thread | Out of the inbox, still in search |
 | `threads_trash` | Move a thread to the trash | Into the trash, where the provider keeps it |
 | `threads_untrash` | Restore a thread from the trash | Back out of the trash |
+| `sweeps_apply` | Clear out a preview | Bins or archives the groups a preview counted |
+| `sweeps_put_back` | Put a clear-out back | Returns what a clear-out moved, for 7 days |
 | `settings_filters_list` | List filters | The rules incoming mail is filed by |
 | `settings_filters_create` | Create a filter | Files incoming mail - no forward, bin or junk |
 | `settings_filters_delete` | Delete a filter | Deletes a rule, filed mail stays put |
@@ -141,8 +144,9 @@ The drafting skill asks the client to show a draft and wait for your yes. What t
 
 ## Limits
 
-- Gmail sign-in is in Google's preview, which admits a fixed number of accounts; once its places are spent, a gmail.com or googlemail.com mailbox connects with an app password, and a Google Workspace one waits for room.
+- Gmail sign-in is in Google's preview, which admits a fixed number of accounts; once its places are spent, a Gmail or Google Workspace mailbox connects with an app password.
 - Discarding a draft, and reading or setting a signature, work only in Gmail mailboxes connected with Google sign-in.
+- A clear-out of a mailbox connected with an app password needs a mail server that names where it moves each message, as iCloud, Fastmail and Gmail do, and clears a Gmail connected that way out of its inbox alone.
 - Microsoft lets an Outlook category take a new colour, never a new name.
 - Mailboxes connected with an app password - iCloud, Fastmail and Gmail - take every tool except filters, the vacation responder, the signature and discarding a draft. iCloud and Fastmail labels are their folders, as your own mail app shows them, and the labels skill leaves them alone.
 - Each account has a daily allowance of tool calls; past it, a call is refused with the time the next one is available.
