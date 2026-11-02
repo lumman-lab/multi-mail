@@ -1,8 +1,8 @@
 {
   "name": "multi-mail",
   "displayName": "Multi Mail",
-  "version": "1.3.4",
-  "description": "Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail and any IMAP mailbox: search, read, send.",
+  "version": "1.3.6",
+  "description": "Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail, other IMAP mailboxes: search, read, send.",
   "author": {
     "name": "Lumman",
     "url": "https://lumman.co"
