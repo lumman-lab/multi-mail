@@ -1,12 +1,12 @@
 # Multi Mail
 
-Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.
+Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail and any IMAP mailbox: search, read, send.
 
-Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud and Fastmail - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI, Antigravity and Kiro, four skills and their evals. The server itself is not in it.
+Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud, Fastmail and any other IMAP mailbox - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI, Antigravity and Kiro, four skills and their evals. The server itself is not in it.
 
 ## Before you start
 
-You need a Lumman account with at least one mailbox connected at https://lumman.co/mcp/account/multi-mail. Sign in there with Google, Microsoft, a passkey or an emailed code. Outlook, Hotmail and Microsoft 365 mailboxes connect with Microsoft sign-in, iCloud and Fastmail with an app password, and Gmail with Google sign-in while Google's preview has room; once it is full, a Gmail or Google Workspace mailbox connects with an app password. Each mailbox's permissions - reading, drafts, sending, organising and settings - are set on the same page.
+You need a Lumman account with at least one mailbox connected at https://lumman.co/mcp/account/multi-mail. Sign in there with Google, Microsoft, a passkey or an emailed code. Outlook, Hotmail and Microsoft 365 mailboxes connect with Microsoft sign-in, iCloud and Fastmail with an app password, any other IMAP mailbox with its address and a password, and Gmail with Google sign-in while Google's preview has room; once it is full, a Gmail or Google Workspace mailbox connects with an app password. Each mailbox's permissions - reading, drafts, sending, organising and settings - are set on the same page.
 
 ## Add it to your client
 
@@ -69,7 +69,9 @@ In the Powers panel press Add Custom Power, choose Import power from GitHub, pas
 
 ### ChatGPT
 
-1. For iCloud or Fastmail, add the mailbox first in your account, under Add a mailbox.
+Needs ChatGPT Pro, Business, Enterprise or Edu. Plus and Free cannot add it.
+
+1. For a mailbox you connect with a password, add it first in your account, under Add a mailbox.
 2. Open chatgpt.com/plugins, press +, then Add custom MCP server.
 3. Name it Multi Mail, paste `https://mail.lumman.co/mcp`, choose OAuth, tick the box and press Create as a plugin.
 4. Install it. On the Lumman page, sign in, add a mailbox if none is connected, and approve.
@@ -97,6 +99,18 @@ Examples:
 - "What in my Outlook and Gmail still needs a reply?"
 - "What total does the invoice Dana sent to my Hotmail come to?"
 - "Reply to Sam in Outlook that Friday works, and show me before it goes."
+
+## Ready requests
+
+The connector offers these requests ready-made; a client shows them as prompts or commands.
+
+- `needs_reply` - What needs a reply. Messages across all your mailboxes still waiting for your answer.
+- `waiting_on` - Who is waiting on whom. Who waits on your reply, and whose reply you wait on, across all your mailboxes.
+- `tidy_newsletters` - Tidy newsletters. Find newsletters and promotions across all your mailboxes and archive them.
+- `morning_brief` - Morning brief. A short summary of every inbox, made to run as a Claude scheduled task.
+- `clean_up_inbox` - Clean up my inbox. See who fills an inbox, then clear only the groups you choose.
+- `keep_tidy` - Keep my inbox tidy. Keep the newest few from the senders you choose and archive the rest, set up as a scheduled task.
+- `manage_rules` - Manage my rules. See the rules that file your incoming mail, and add, change or remove only the ones you choose.
 
 ## Tools
 
@@ -126,31 +140,33 @@ Examples:
 | `threads_archive` | Archive a thread | Out of the inbox, still in search |
 | `threads_trash` | Move a thread to the trash | Into the trash, where the provider keeps it |
 | `threads_untrash` | Restore a thread from the trash | Back out of the trash |
-| `sweeps_apply` | Clear out a preview | Bins or archives the groups a preview counted |
+| `sweeps_apply` | Clear out a preview | Bins, archives, files or marks read its groups |
 | `sweeps_put_back` | Put a clear-out back | Returns what a clear-out moved, for 7 days |
 | `settings_filters_list` | List filters | The rules incoming mail is filed by |
 | `settings_filters_create` | Create a filter | Files incoming mail - no forward, bin or junk |
+| `settings_filters_update` | Change a filter | Changes, pauses or resumes a rule |
 | `settings_filters_delete` | Delete a filter | Deletes a rule, filed mail stays put |
-| `settings_send_as_patch` | Edit the signature | Replaces the mailbox's own signature |
-| `settings_send_as_get` | Read the signature | The mailbox's own signature, as it stands |
+| `settings_send_as_patch` | Edit the signature | Replaces the signature its mail goes out with |
+| `settings_send_as_get` | Read the signature | The signature its mail goes out with |
+| `settings_send_as_find` | Find the signature | The signature its sent mail carries, as a draft |
 | `settings_get_vacation` | Read the vacation responder | Whether it replies, and what it says |
 | `settings_update_vacation` | Set the vacation responder | Turns it on or off, and what it says |
 
 ## Where your mail goes
 
-Claude and Claude Code send every call to https://lumman.co/mcp/mail, every other client to https://mail.lumman.co/mcp - two addresses of one server, run by Lumman. Signing in runs through the authorisation server those addresses name. Lumman keeps no copy of your mail: each message and attachment is fetched from its provider when a client asks, its words are screened for prompt attacks by Google Cloud's Model Armor - an attachment asked for as the original file is not - and the mail is passed on only to the client you approved. What the connector passes on, and to whom, is in the privacy policy: https://lumman.co/privacy.
+Claude and Claude Code send every call to https://lumman.co/mcp/mail, every other client to https://mail.lumman.co/mcp - two addresses of one server, run by Lumman. Signing in runs through the authorisation server those addresses name. Lumman keeps no copy of your mail: each message and attachment is fetched from its provider when a client asks, its words are screened for prompt attacks by Google Cloud's Model Armor - an attachment asked for as the original file is not - as are the words of every draft and send before they reach the provider, and the mail is passed on only to the client you approved - an attachment's original also to whoever holds the 15-minute link that client is given. What the connector passes on, and to whom, is in the privacy policy: https://lumman.co/privacy.
 
 The drafting skill asks the client to show a draft and wait for your yes. What the connector itself enforces is each mailbox's permission to send, set at https://lumman.co/mcp/account/multi-mail: with sending off, nothing is sent, whatever a client asks.
 
 ## Limits
 
 - Gmail sign-in is in Google's preview, which admits a fixed number of accounts; once its places are spent, a Gmail or Google Workspace mailbox connects with an app password.
-- Discarding a draft, and reading or setting a signature, work only in Gmail mailboxes connected with Google sign-in.
-- A clear-out of a mailbox connected with an app password needs a mail server that names where it moves each message, as iCloud, Fastmail and Gmail do, and clears a Gmail connected that way out of its inbox alone.
+- A clear-out, and any change to a draft, in a mailbox connected with a password needs a mail server that names where it moves each message, as iCloud, Fastmail and Gmail do, and clears a Gmail connected that way out of its inbox alone.
 - Microsoft lets an Outlook category take a new colour, never a new name.
-- Mailboxes connected with an app password - iCloud, Fastmail and Gmail - take every tool except filters, the vacation responder, the signature and discarding a draft. iCloud and Fastmail labels are their folders, as your own mail app shows them, and the labels skill leaves them alone.
+- Mailboxes connected with a password - iCloud, Fastmail, Gmail and any other IMAP mailbox - take every tool except filters and the vacation responder. iCloud and Fastmail labels are their folders, as your own mail app shows them, and the labels skill leaves them alone.
+- Yahoo, AOL, Yandex and Mail.ru mailboxes are not connected.
 - Each account has a daily allowance of tool calls; past it, a call is refused with the time the next one is available.
-- Mail whose words screen as a prompt attack is refused rather than passed on, and a call whose screening cannot finish is closed.
+- A message whose words screen as a prompt attack is withheld from the answer that would carry it, and the rest is still given; anything else that screens so is refused, and a call whose screening cannot finish is closed.
 
 ## Evals
 

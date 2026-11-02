@@ -20,7 +20,7 @@ Nothing is sent until the person has seen the draft and said yes to it.
 
 This skill never uses `messages_send`, `messages_reply` or `messages_forward`: each sends in one call, with no draft to show.
 
-A draft that is not wanted: `drafts_delete` discards it in a Gmail mailbox. An Outlook draft keeps its id once sent, so the connector never discards one - ask the person to delete it in Outlook. Nor does it discard an iCloud or Fastmail draft: the person deletes it in their own mail app.
+A draft that is not wanted: `drafts_delete` moves it to that mailbox's bin, and `threads_untrash` with the `messageId` it answers and scope `message` brings it back as a draft. A message already sent is never discarded.
 
 Examples:
 

@@ -1,14 +1,14 @@
 {
   "name": "multi-mail",
   "displayName": "Multi Mail",
-  "version": "1.3.1",
-  "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail at once: search, read, draft, send and organise mail.",
+  "version": "1.3.3",
+  "description": "Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail and any IMAP mailbox: search, read, send.",
   "author": {
     "name": "Lumman"
   },
   "homepage": "https://lumman.co/mcp/multi-mail",
   "repository": "https://github.com/lumman-lab/multi-mail",
   "license": "MIT",
-  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365", "icloud", "fastmail"],
+  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365", "icloud", "fastmail", "imap"],
   "logo": ".claude-plugin/icon.png"
 }

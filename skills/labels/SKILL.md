@@ -5,7 +5,7 @@ description: Tidy the labels of a connected Outlook, Hotmail, Microsoft 365 or G
 
 # Label hygiene
 
-1. List the labels of each mailbox in question with `labels_list`. An Outlook mailbox's categories are its labels. Gmail's own system labels (INBOX, SENT, SPAM, TRASH and the like) are not the person's to tidy.
+1. List the labels of each mailbox in question with `labels_list`. An Outlook mailbox's categories are its labels to tidy; its folders, listed beside them as type folder, are left alone. Gmail's own system labels (INBOX, SENT, SPAM, TRASH and the like) are not the person's to tidy.
 2. Find what to tidy:
    - duplicates and near-duplicates - one name in another case, spacing, spelling or plural ("Receipts", "Reciepts");
    - labels nothing carries - in Gmail, search for each label's threads with `messages_list` (label:name). An Outlook category cannot be searched for: its messages are found only by reading the categories on the messages a search answers, so never call an Outlook category unused on that evidence;
