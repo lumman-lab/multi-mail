@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: choose-imap
+description: Baseline on the texts before the rewrite, claude-sonnet-5-5 - passed 3 of 3 runs.
+execution:
+  prompt: Look in my work email - it's on our own IMAP server - for the contract Lee sent.
+graders:
+  - name: searched the mail
+    type: regex
+    target: mock_calls
+    pattern: '"tool": ?"[^"]*messages_list'

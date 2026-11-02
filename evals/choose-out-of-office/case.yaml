@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: choose-out-of-office
+description: Baseline on the texts before the rewrite, claude-sonnet-5-5 - passed 3 of 3 runs.
+execution:
+  prompt: I'm away until Monday - turn on an auto-reply on my Hotmail saying I'll answer when I'm back.
+graders:
+  - name: set the automatic reply
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__settings_update_vacation

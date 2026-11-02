@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: choose-hotmail
+description: Baseline on the texts before the rewrite, claude-sonnet-5-5 - passed 3 of 3 runs.
+execution:
+  prompt: Did the plumber get back to me on my Hotmail about Tuesday?
+graders:
+  - name: searched the mail
+    type: regex
+    target: mock_calls
+    pattern: '"tool": ?"[^"]*messages_list'

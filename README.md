@@ -170,9 +170,9 @@ The drafting skill asks the client to show a draft and wait for your yes. What t
 
 ## Evals
 
-`claude plugin eval .` runs four cases, one per skill, against invented Hotmail and Gmail mailboxes answered from fixed mock files under `evals/`.
+`claude plugin eval .` runs four cases, one per skill, and thirteen `choose-*` cases, against invented Hotmail, Gmail, iCloud and IMAP mailboxes answered from fixed mock files under `evals/`. Each `choose-*` case is a request in a person's own words - a mailbox by its provider, every account at once, sending, filing, a rule, an auto-reply, clearing out an inbox - that the connector's tools should take, and three are requests no mail tool should take. They read the tools' own descriptions, saved in `evals/mocks/multi-mail/_tools.json`; the mocks carry no server instructions. Run on 2 November 2026 with Claude Code 2.1.308 and model claude-sonnet-5-5, three runs per case: all thirteen passed 3 of 3.
 
-To see what the skills add, every case ran in two setups with the connector's tools in place: once with the plugin as shipped, once with its `skills/` folder removed (`claude plugin eval <copy> --ablation none`). Run on 18 October 2026 with Claude Code 2.1.292, model claude-sonnet-5-5 and the CLI's default Haiku judge, three runs per case each way:
+To see what the skills add, each of the four skill cases ran in two setups with the connector's tools in place: once with the plugin as shipped, once with its `skills/` folder removed (`claude plugin eval <copy> --ablation none`). Run on 18 October 2026 with Claude Code 2.1.292, model claude-sonnet-5-5 and the CLI's default Haiku judge, three runs per case each way:
 
 - triage - lists the two threads waiting for a reply and nothing else: 3 of 3 with the skills and 3 of 3 without. The skill adds nothing measurable here.
 - attachments - gives the total and due date read off the invoice PDF: 3 of 3 with and without. The skill adds nothing measurable here.

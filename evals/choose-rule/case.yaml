@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: choose-rule
+description: Baseline on the texts before the rewrite, claude-sonnet-5-5 - passed 3 of 3 runs.
+execution:
+  prompt: From now on, have everything from noreply@linkedin.com in my Gmail skip the inbox and go under a LinkedIn label.
+graders:
+  - name: made a rule
+    type: tool_used
+    tool: mcp__plugin_multi-mail_multi-mail__settings_filters_create

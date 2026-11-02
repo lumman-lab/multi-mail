@@ -1,0 +1,1 @@
+{"labels":[{"id":"fld-1","name":"House","type":"folder","total":14,"unread":0},{"id":"fld-2","name":"Travel","type":"folder","total":31,"unread":2},{"id":"cat-1","name":"Receipts","type":"category"}]}

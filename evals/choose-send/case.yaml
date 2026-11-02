@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: choose-send
+description: Baseline on the texts before the rewrite, claude-sonnet-5-5 - passed 3 of 3 runs.
+execution:
+  prompt: Send an email from my Gmail to jo@example.org saying I'm running ten minutes late.
+graders:
+  - name: wrote it in the mailbox
+    type: regex
+    target: mock_calls
+    pattern: '"tool": ?"[^"]*(drafts_create|messages_send|drafts_send)"'

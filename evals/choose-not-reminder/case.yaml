@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: choose-not-reminder
+description: Baseline on the texts before the rewrite, claude-sonnet-5-5 - passed 3 of 3 runs.
+execution:
+  prompt: Remind me at six tonight to call Mum.
+graders:
+  - name: no mail tool
+    type: regex
+    target: mock_calls
+    pattern: '"tool"'
+    match: not_contains

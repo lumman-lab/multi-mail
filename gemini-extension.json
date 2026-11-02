@@ -1,6 +1,6 @@
 {
   "name": "multi-mail",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail and any IMAP mailbox: search, read, send.",
   "mcpServers": {
     "multi-mail": {
