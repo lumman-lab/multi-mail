@@ -1,6 +1,6 @@
 ---
 name: drafting
-description: Write, reply to or forward an email from a connected Outlook, Hotmail, Microsoft 365, Gmail, iCloud or Fastmail mailbox as a draft, show it, and send it only after the person says yes to that draft. Use for any request to write, answer or forward mail.
+description: Write, reply to or forward an email from a connected Outlook, Hotmail, Microsoft 365, Gmail, Yahoo, AOL, iCloud, Fastmail or other IMAP mailbox as a draft, show it, and send it only after the person says yes to that draft. Use for any request to write, answer or forward mail.
 ---
 
 # Draft, confirm, then send

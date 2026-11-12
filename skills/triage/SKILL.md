@@ -1,6 +1,6 @@
 ---
 name: triage
-description: Sort what is waiting across every connected mailbox - Outlook, Hotmail, Microsoft 365, Gmail, iCloud and Fastmail together - into what needs a reply, what needs a decision and what can wait. Use when asked what needs attention, what is still waiting for an answer, or for a summary of the inboxes.
+description: Sort what is waiting across every connected mailbox - Outlook, Hotmail, Microsoft 365, Gmail, Yahoo, AOL, iCloud, Fastmail and other IMAP mailboxes together - into what needs a reply, what needs a decision and what can wait. Use when asked what needs attention, what is still waiting for an answer, or for a summary of the inboxes.
 ---
 
 # Triage across mailboxes
