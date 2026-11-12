@@ -1,12 +1,12 @@
 # Multi Mail
 
-Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail, other IMAP mailboxes: search, read, send.
+Gmail, Outlook, Hotmail, Microsoft 365, Yahoo, iCloud and other IMAP mailboxes: search, read, send.
 
-Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, iCloud, Fastmail and other IMAP mailboxes - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI, Antigravity and Kiro, four skills and their evals. The server itself is not in it.
+Multi Mail is a remote MCP server run by Lumman Ltd. It puts every mailbox you connect - Gmail, Outlook.com, Hotmail, Microsoft 365, Yahoo, AOL, iCloud, Fastmail and other IMAP mailboxes - behind one connector, so an AI client can search all of them in one call and read, draft, send and organise mail in each. This repository holds what clients install: the manifests for Claude Code, Cursor, Gemini CLI, Antigravity and Kiro, four skills and their evals. The server itself is not in it.
 
 ## Before you start
 
-You need a Lumman account with at least one mailbox connected at https://lumman.co/mcp/account/multi-mail. Sign in there with Google, Microsoft, a passkey or an emailed code. Outlook, Hotmail and Microsoft 365 mailboxes connect with Microsoft sign-in, iCloud and Fastmail with an app password, other IMAP mailboxes with their address and a password, and Gmail with Google sign-in while Google's preview has room; once it is full, a Gmail or Google Workspace mailbox connects with an app password. Each mailbox's permissions - reading, drafts, sending, organising and settings - are set on the same page.
+You need a Lumman account with at least one mailbox connected at https://lumman.co/mcp/account/multi-mail. Sign in there with Google, Microsoft, a passkey or an emailed code. Outlook, Hotmail and Microsoft 365 mailboxes connect with Microsoft sign-in; Gmail, Yahoo, AOL, Verizon.net, iCloud and Fastmail with an app password, AT&T with its secure mail key, Inkbox with the inbox's API key, and other IMAP mailboxes with their address and a password. Gmail also connects with Google sign-in while Google's preview has room. Each mailbox's permissions - reading, drafts, sending, organising and settings - are set on the same page.
 
 ## Add it to your client
 
@@ -164,7 +164,8 @@ The drafting skill asks the client to show a draft and wait for your yes. What t
 - A clear-out, and any change to a draft, in a mailbox connected with a password needs a mail server that names where it moves each message, as iCloud, Fastmail and Gmail do, and clears a Gmail connected that way out of its inbox alone.
 - Microsoft lets an Outlook category take a new colour, never a new name.
 - Mailboxes connected with a password - iCloud, Fastmail, Gmail and other IMAP mailboxes - take every tool except filters and the vacation responder. iCloud and Fastmail labels are their folders, as your own mail app shows them, and the labels skill leaves them alone.
-- Yahoo, AOL, Yandex and Mail.ru mailboxes are not connected.
+- Yahoo, AOL, Verizon.net and AT&T show a mail app only each folder's newest messages, and Multi Mail reads that view.
+- Yandex and Mail.ru mailboxes are not connected, nor mail Yahoo keeps for another company.
 - Each account has a daily allowance of tool calls; past it, a call is refused with the time the next one is available.
 - A message whose words screen as a prompt attack is withheld from the answer that would carry it, and the rest is still given; anything else that screens so is refused, and a call whose screening cannot finish is closed.
 

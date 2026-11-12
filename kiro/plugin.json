@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "multi-mail",
-  "version": "1.3.6",
-  "description": "Gmail, Outlook, Hotmail, Microsoft 365, iCloud, Fastmail, other IMAP mailboxes: search, read, send.",
+  "version": "1.3.7",
+  "description": "Gmail, Outlook, Hotmail, Microsoft 365, Yahoo, iCloud and other IMAP mailboxes: search, read, send.",
   "author": {
     "name": "Lumman",
     "url": "https://lumman.co"
@@ -10,5 +10,5 @@
   "homepage": "https://lumman.co/mcp/multi-mail",
   "repository": "https://github.com/lumman-lab/multi-mail",
   "license": "MIT",
-  "keywords": ["email", "outlook", "hotmail", "gmail", "microsoft-365", "icloud", "fastmail", "imap"]
+  "keywords": ["email", "outlook", "hotmail", "yahoo", "aol", "gmail", "microsoft-365", "icloud", "fastmail", "imap"]
 }
